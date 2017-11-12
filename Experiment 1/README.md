@@ -1,5 +1,5 @@
 # Lab 1
-Before diving into the much easier Arduino style of coding, for the first two labs, we shall implement codes using AVR style so as to give students an idea of register access and manipulation on Atmega-328.  
+Before diving into the much easier Arduino style of coding, for the first two labs, we shall implement codes using AVR style so as to give students an idea of register access and manipulation on Atmega-328. All experiments require Arduino Uno (or higher) and the Arduino IDE.
 
 ## Experiment 1A
 In this experiment, we blink an LED connected to digital pin 8 of Arduino (or PB0 of Atmega). 
