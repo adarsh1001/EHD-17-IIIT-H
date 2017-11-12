@@ -5,17 +5,15 @@
 unsigned long prev, curr;
 void setup()
 {
-    DDRB |= 0x20;  // Direction of Port B Pin 0 set as Output. 0x01 is hex for B00000001
-    prev=millis();
-    PORTB&=~0x20;
+    DDRB |= 0x01;  // Direction of Port B Pin 0 set as Output. 0x01 is hex for B00000001
+    PORTB&=~0x01;  // Initially, LED remains OFF.
 }
 
 void loop()
 {
-     curr=millis();
-     if ((curr-prev)>=1000)
-     {
-        PORTB ^= 0x20;   // Set bit for PB0. Turns on LED.
-        prev=curr;
-     }
+    PORTB &= ~0x10;   // Clear bit PB0. Turns LED OFF.
+    _delay_ms(1000);  // Wait for 1s.
+    PORTB |= 0x10;    // Set bit PB0. Turns LED ON.
+    _delay_ms(1000);  // Wait for 1s.
+    
 }
