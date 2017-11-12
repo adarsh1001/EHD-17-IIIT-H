@@ -20,5 +20,5 @@ void loop()
   else
     PORTB &= ~0x01; //Else, turn LED OFF.
 
-  _delay_ms(20);
+  _delay_ms(20); //Software Debouncing
 }
